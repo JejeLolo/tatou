@@ -5,9 +5,12 @@ import store from './store'
 import vuetify from './plugins/vuetify'
 import { loadFonts } from './plugins/webfontloader'
 
+import Default from './layouts/Default.vue'
+
 loadFonts()
 
 createApp(App)
+  .component('default-layout', Default)
   .use(router)
   .use(store)
   .use(vuetify)
